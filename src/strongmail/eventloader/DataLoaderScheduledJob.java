@@ -22,8 +22,7 @@ public class DataLoaderScheduledJob implements Job {
 	  if (!checkIfExecuting()){
 		try{
 		  System.out.println("\n\nJOB STARTED AT: " + new Date().toString());
-		  LogFileParser lfp = new LogFileParser();
-		  lfp.process();		  
+          MailingInfoFetch.start();
 		  System.out.println("\n\nJOB ENDED AT: " + new Date().toString());
 		}
 		catch(Exception e){
